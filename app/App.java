@@ -25,6 +25,7 @@ public class App{
                 staff.start();
             }else{
                 System.out.println("Exit");
+                return;
             }
 
         } while (choice!=0);
