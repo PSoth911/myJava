@@ -21,6 +21,27 @@ public class InsertData {
         }
     }
 
+    public void increaseItem(int id){
+       for (int i = 0; i < items.size(); i++) {
+            if (items.get(i).id== id) {
+                items.get(i).quantity++;
+                break;
+            }
+        }
+    }
+    public void decreaseItem(int id){
+       for (int i = 0; i < items.size(); i++) {
+            if (items.get(i).id== id) {
+                if (items.get(i).quantity>0){
+                    items.get(i).quantity--;
+                    break;
+                }else{
+                    System.out.println("Item is zero");
+                }
+            }
+        }
+    }
+
 
     public ArrayList<Makeitem> getItems() {
         return items;
