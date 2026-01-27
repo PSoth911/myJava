@@ -22,7 +22,7 @@ public class InsertData {
         }
     }
 
-    public void increaseItem(int id,int value){
+    public void increaseItemByValue(int id,int value){
        for (int i = 0; i < items.size(); i++) {
             if (items.get(i).id== id) {
                 items.get(i).quantity+=value;
@@ -30,7 +30,7 @@ public class InsertData {
             }
         }
     }
-    public void decreaseItem(int id,int value){
+    public void decreaseItemByValue(int id,int value){
        for (int i = 0; i < items.size(); i++) {
             if (items.get(i).id== id) {
                 if (items.get(i).quantity>=value){
@@ -45,6 +45,27 @@ public class InsertData {
         }
     }
 
+    public void increaseItem(int id){
+       for (int i = 0; i < items.size(); i++) {
+            if (items.get(i).id== id) {
+                items.get(i).quantity++;
+                break;
+            }
+        }
+    }
+    public void decreaseItem(int id){
+       for (int i = 0; i < items.size(); i++) {
+            if (items.get(i).id== id) {
+                if (items.get(i).quantity>0){
+                    items.get(i).quantity--;
+                    break;
+                }else{
+                    System.out.println("Item's quantity is 0");
+                    break;
+                }
+            }
+        }
+    }
 
     public ArrayList<Makeitem> getItems() {
         return items;

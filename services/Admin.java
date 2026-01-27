@@ -54,7 +54,7 @@ public class Admin{
         data.deleteItem(value);
     }
 
-    private void increasing(){
+    private void increasingByValue(){
         System.out.println("Please Input the ID and Increase value");
         int value;
         int inc;
@@ -62,10 +62,10 @@ public class Admin{
         value = sc.nextInt();
         System.out.print("Increase value >>");
         inc = sc.nextInt();
-        data.increaseItem(value,inc);
+        data.increaseItemByValue(value,inc);
     }
 
-    private void decreasing(){
+    private void decreasingByValue(){
         System.out.println("Please Input the ID and Decrease value");
         int value;
         int dec;
@@ -73,7 +73,7 @@ public class Admin{
         value = sc.nextInt();
         System.out.print("Decrease value >>");
         dec = sc.nextInt();
-        data.decreaseItem(value,dec);
+        data.decreaseItemByValue(value,dec);
     }
 
     private void updateStock(){
@@ -95,12 +95,12 @@ public class Admin{
                     break;  
                 case 2:
                     System.out.println("\n Increase Item's Quantity");
-                    increasing();
+                    increasingByValue();
                     viewProducts();
                     break;  
                 case 3:    
                     System.out.println("\n Decrease Item's Quantity");
-                    decreasing();
+                    decreasingByValue();
                     viewProducts();
                     break; 
                 case 4:
