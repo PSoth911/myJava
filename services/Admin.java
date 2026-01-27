@@ -8,7 +8,13 @@ import util.PrintData;
 
 
 public class Admin{
-    private InsertData data = new InsertData();
+
+    public InsertData data;
+
+    public Admin(InsertData data){
+        this.data=data;
+    }
+    
     private final int password = 12345;
     Scanner sc = new Scanner(System.in);
 
@@ -21,11 +27,7 @@ public class Admin{
         PrintData.printItems(items);
     }
 
-    private void demoAdd(){
-        data.addItem("Apple",10,2,3);
-        data.addItem("Apple",9,4,2);
-        data.addItem("Apple",8,3,6);
-    }
+    
 
     private void adding(){
         System.out.println("Please Input the name and quantity of product");
@@ -114,7 +116,7 @@ public class Admin{
     }
 
     public void start(){
-        demoAdd();
+
         int choice;
         System.out.println("\nWelcome Admin\n");
         do {
