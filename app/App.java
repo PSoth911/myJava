@@ -29,7 +29,7 @@ public class App{
                 Admin admin = new Admin(data);
                 admin.start();
             }else if(choice==2){
-                Staff staff = new Staff();
+                Staff staff = new Staff(data);
                 staff.start();
             }else{
                 System.out.println("Exit");
