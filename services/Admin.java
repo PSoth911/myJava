@@ -3,7 +3,7 @@ package services;
 import java.util.Scanner;
 import java.util.ArrayList;
 import data.InsertData;
-import model.Makeitem;
+import model.Product;
 import util.PrintData;
 
 
@@ -23,7 +23,7 @@ public class Admin{
     } 
 
     private void viewProducts() {
-        ArrayList<Makeitem> items = data.getItems();
+        ArrayList<Product> items = data.getItems();
         PrintData.printItems(items);
     }
 
@@ -116,7 +116,10 @@ public class Admin{
     }
 
     public void start(){
-
+        int pw;
+        System.out.print("Input the password : ");
+        pw = sc.nextInt();
+        login(pw);
         int choice;
         System.out.println("\nWelcome Admin\n");
         do {

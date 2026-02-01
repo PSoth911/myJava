@@ -1,14 +1,14 @@
 package data;
-import model.Makeitem;
+import model.Product;
 import java.util.ArrayList;
 
 public class InsertData {
 
-    private ArrayList<Makeitem> items = new ArrayList<>();
+    private ArrayList<Product> items = new ArrayList<>();
     private int id = 1;
 
     public void addItem(String name, int quantity,double importPrice,double exportPrice) {
-        items.add(new Makeitem(id, name, quantity,importPrice,exportPrice));
+        items.add(new Product(id, name, quantity,importPrice,exportPrice));
         id++;
     }
 
@@ -67,7 +67,7 @@ public class InsertData {
         }
     }
 
-    public ArrayList<Makeitem> getItems() {
+    public ArrayList<Product> getItems() {
         return items;
     }
 }

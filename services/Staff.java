@@ -3,17 +3,17 @@ package services;
 import java.util.ArrayList;
 import java.util.Scanner;
 import data.InsertData;
-import model.Makeitem;
+import model.Product;
 import util.PrintData;
 
 public class Staff {
      private void sellItem() {
         System.out.print("Enter item name to sell: ");
         String name = sc.next();
-        ArrayList<Makeitem> items = data.getItems();
+        ArrayList<Product> items = data.getItems();
         boolean found = false;
 
-        for (Makeitem item : items) {
+        for (Product item : items) {
             if (item.name.equalsIgnoreCase(name)) {
                 found = true;
                 System.out.print("Enter quantity to sell: ");
@@ -41,7 +41,7 @@ public class Staff {
         this.data=data;
     }
     private void viewProducts() {
-        ArrayList<Makeitem> items = data.getItems();
+        ArrayList<Product> items = data.getItems();
         PrintData.printItems(items);
     }
     public void start() {

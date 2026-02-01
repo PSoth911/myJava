@@ -1,15 +1,17 @@
 package model;
 
-public class Makeitem{
+public class Product{
     public int id;
+    public String category;
     public String name;
     public int quantity;
     public double importPrice;
+    public double importDate;
     public double exportPrice;
+    public double exportDate;
 
 
-    public Makeitem(int id,String name,int quantity,double importPrice,double exportPrice){
-        this.id=id;
+    public Product(String name,int quantity,double importPrice,double exportPrice){
         this.name=name;
         this.quantity=quantity;
         this.importPrice=importPrice;
