@@ -2,13 +2,13 @@ package app;
 
 import services.Admin;
 import services.Staff;
-import data.InsertData;
+import data.InsertProduct;
 import java.util.Scanner;
 
 
 public class App{
     Scanner sc = new Scanner(System.in);
-    public InsertData data = new InsertData();
+    public InsertProduct data = new InsertProduct();
     public void demoAdd(){
         data.addItem("Apple",10,2,3);
         data.addItem("Apple",9,4,2);

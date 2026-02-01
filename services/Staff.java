@@ -2,7 +2,7 @@ package services;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import data.InsertData;
+import data.InsertProduct;
 import model.Product;
 import util.PrintData;
 
@@ -36,8 +36,8 @@ public class Staff {
     }
 
     Scanner sc = new Scanner(System.in);
-    private InsertData data;
-    public Staff(InsertData data){
+    private InsertProduct data;
+    public Staff(InsertProduct data){
         this.data=data;
     }
     private void viewProducts() {

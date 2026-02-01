@@ -2,15 +2,15 @@ package data;
 import model.Product;
 import java.util.ArrayList;
 
-public class InsertData {
+public class InsertProduct {
 
     private ArrayList<Product> items = new ArrayList<>();
     private int id = 1;
 
-    public void addItem(String name, int quantity,double importPrice,double exportPrice) {
-        items.add(new Product(id, name, quantity,importPrice,exportPrice));
+    public void addItem(String category,String name,int quantity,double importPrice,int importDate,double exportPrice,int expiredDate) {
+        items.add(new Product(id,category,name,quantity,importPrice,importDate,exportPrice,expiredDate));
         id++;
-    }
+    }  
 
     public void deleteItem(int id){
        for (int i = 0; i < items.size(); i++) {

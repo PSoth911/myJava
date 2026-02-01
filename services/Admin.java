@@ -2,16 +2,16 @@ package services;
 
 import java.util.Scanner;
 import java.util.ArrayList;
-import data.InsertData;
+import data.InsertProduct;
 import model.Product;
 import util.PrintData;
 
 
 public class Admin{
 
-    public InsertData data;
+    public InsertProduct data;
 
-    public Admin(InsertData data){
+    public Admin(InsertProduct data){
         this.data=data;
     }
     
